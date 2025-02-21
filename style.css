@@ -324,12 +324,7 @@ section .image img {
 	color:  inherit;
 }
 
-.footer-distributed .footer-company-name{
-	color:  #222;
-	font-size: 14px;
-	font-weight: normal;
-	margin: 0;
-}
+
 
 /* Footer Center */
 
@@ -434,6 +429,25 @@ section .image img {
 
 	margin-right: 3px;
 	margin-bottom: 5px;
+}
+
+.footer-info { 
+  margin-top: auto; /* Прижимаем к низу */
+  width: 100%;
+  text-align: center;
+  border-top: 2px solid #373838;
+  padding-top: 10px;
+  padding-bottom: 10px; /* добавляем padding снизу */
+  background-color: #a09b9b; /* или любой другой цвет фона */
+  color: #1a1919; /* или любой другой цвет текста */
+}
+
+
+ .footer-company-name{
+	color:  #222;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
 }
 
 /* If you don't want the footer to be responsive, remove these media queries */
