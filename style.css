@@ -426,22 +426,25 @@ section .image img {
 /* Стиль для модального окна */
 .modal {
   display: none; /* Скрыто по умолчанию */
-  position: fixed; /* Фиксированное положение */
-  z-index: 1; /* Самый высокий индекс */
-  left: 0;
-  top: 0;
-  width: 100%; /* Полная ширина */
-  height: 100%; /* Полная высота */
-  overflow: auto; /* Прокрутка, если необходимо */
-  background-color: rgba(0,0,0,0.4); /* Полупрозрачный фон */
+    position: fixed; /* Фиксированное положение */
+    z-index: 1000; /* Самый высокий индекс */
+    left: 0;
+    top: 0;
+    width: 100%; /* Полная ширина */
+    height: 100%; /* Полная высота */
+    overflow: auto; /* Прокрутка, если необходимо */
+    background-color: rgba(0,0,0,0.4); /* Полупрозрачный фон */
 }
 
 .modal-content {
   background-color: #fefefe;
-  margin: 15% auto; /* 15% сверху и по центру */
-  padding: 20px;
-  border: 1px solid #888;
-  width: 50%; /* 50% ширины */
+    margin: 15% auto; /* 15% сверху и по центру */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* 80% ширины */
+    
+    
+  
 }
 
 .modal-content p {
@@ -449,6 +452,7 @@ section .image img {
   hyphens: auto;
   font-size: 16px;
   line-height: 1.5;
+  
 }
 
 .modal-content h3 {
@@ -460,6 +464,8 @@ section .image img {
   list-style-type: disc;
   margin-left: 20px;
 }
+
+
 
 .close {
   color: #aaa;
@@ -489,7 +495,31 @@ section .image img {
 
 /* Медиа*/
 
+
+@media (max-width: 480px) {
+  
+  .modal {
+    background-color: #fefefe;
+    top: 125px;
+           
+    
+  }
+  
+  
+  .modal-content {
+      width: 90%; /* Изменяем ширину модального окна на маленьких экранах */
+  }
+}
+
 @media (max-width: 768px) {
+  .navbar-toggler {
+    display: block;
+  }
+  section .image,
+  section .content {
+      flex-basis: 48%; /* Занимают примерно половину ширины */
+      margin: 0;
+  }
   .logo {
     width: 80px;
     height: auto;
@@ -503,16 +533,57 @@ section .image img {
   .navbar-toggler {
     display: block;
   }
+  .modal-content {
+    width: 90%; /* 90% ширины на маленьких экранах */
+    margin: 20px auto; /* Уменьшаем отступ сверху */
+    
+}
 }
 
-/* Скрытие контактной информации на маленьких экранах */
-@media (max-width: 991px) {
-  .contact-info {
-    display: none;
-  }
+
+@media (max-width: 880px) {
+
+	.footer-distributed{
+		font: bold 14px sans-serif;
+    flex-direction: column; /* Изменяем направление на колонку */
+    align-items: center; /* Выравниваем элементы по центру */
+	}
+
+	
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+    margin-bottom: 5px; /* Отступ под иконкой */
+	}
+  
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right
+{
+    width: 100%; /* Занимаем всю ширину */
+    margin-bottom: 20px; /* Добавляем отступ снизу */
+    text-align: center; /* Текст по центру */
 }
 
-    @media (max-width: 900px) {
+.footer-distributed .footer-left .logo {
+  margin: 0 auto; /* Центрируем логотип по горизонтали */
+  margin-bottom: 10px; /* Добавляем отступ снизу от логотипа */
+}
+.footer-distributed .footer-left .logo img {
+display: block; /* Убираем возможное пустое пространство под изображением */
+max-width: 150px; /* Ограничиваем максимальную ширину логотипа */
+height: auto; /* Сохраняем пропорции изображения */
+}
+
+
+.footer-distributed .footer-center > div {
+display: flex; /* Используем flexbox для каждого элемента (иконка + текст) */
+flex-direction: column; /* Располагаем иконку и текст вертикально */
+align-items: center; /* Выравниваем по центру */
+margin-bottom: 10px; /* Отступ между элементами */
+}
+}
+
+@media (max-width: 900px) {
   section {
     flex-direction: column; 
   }
@@ -528,13 +599,16 @@ section .image img {
   }
 }
 
-    @media (min-width: 768px) { /* Для экранов больше 768px */
-  section .image,
-  section .content {
-      flex-basis: 48%; /* Занимают примерно половину ширины */
-      margin: 0;
+/* Скрытие контактной информации на маленьких экранах */
+@media (max-width: 991px) {
+  .contact-info {
+    display: none;
   }
 }
+
+   
+
+  
       @media (max-width: 992px) {
   .navbar-toggler {
     display: block;
@@ -554,89 +628,9 @@ section .image img {
   }
 }
 
-@media (max-width: 768px) {
-  .navbar-toggler {
-    display: block;
-  }
-}
-
-
-@media (max-width: 480px) {
-  .modal-content {
-      width: 90%; /* Изменяем ширину модального окна на маленьких экранах */
-  }
-}
-
-@media (max-width: 880px) {
-
-	.footer-distributed{
-		font: bold 14px sans-serif;
-	}
-
-	.footer-distributed .footer-left,
-	.footer-distributed .footer-center,
-	.footer-distributed .footer-right{
-		display: block;
-		width: 100%;
-		margin-bottom: 40px;
-		text-align: center;
-	}
-
-	.footer-distributed .footer-center i{
-		margin-left: 0;
-	}
-
-}
 
 
 
-
-@media (max-width: 880px) {
-  .footer-distributed {
-      flex-direction: column; /* Изменяем направление на колонку */
-      align-items: center; /* Выравниваем элементы по центру */
-  }
-
-  .footer-distributed .footer-left,
-  .footer-distributed .footer-center,
-  .footer-distributed .footer-right
-  {
-      width: 100%; /* Занимаем всю ширину */
-      margin-bottom: 20px; /* Добавляем отступ снизу */
-      text-align: center; /* Текст по центру */
-  }
-
-  .footer-distributed .footer-center i {
-      margin-left: 0; /* Убираем отступ слева для иконок */
-  }
-  .footer-distributed .footer-left .logo {
-    margin: 0 auto; /* Центрируем логотип по горизонтали */
-    margin-bottom: 10px; /* Добавляем отступ снизу от логотипа */
-}
-.footer-distributed .footer-left .logo img {
-  display: block; /* Убираем возможное пустое пространство под изображением */
-  max-width: 150px; /* Ограничиваем максимальную ширину логотипа */
-  height: auto; /* Сохраняем пропорции изображения */
-}
-
-.footer-distributed .footer-center {
-  width: 100%; /* Занимаем всю ширину */
-  margin-bottom: 20px; /* Добавляем отступ снизу */
-  text-align: center; /* Текст по центру */
-}
-
-.footer-distributed .footer-center > div {
-  display: flex; /* Используем flexbox для каждого элемента (иконка + текст) */
-  flex-direction: column; /* Располагаем иконку и текст вертикально */
-  align-items: center; /* Выравниваем по центру */
-  margin-bottom: 10px; /* Отступ между элементами */
-}
-
-.footer-distributed .footer-center i {
-  margin-bottom: 5px; /* Отступ под иконкой */
-}
-
-}
 
 
 
