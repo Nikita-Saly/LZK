@@ -10,7 +10,11 @@ html, body {
   font-family: 'Roboto', sans-serif;
   background-color: #f9f9f9;
   line-height: 1.6;
+  scroll-behavior: smooth;
+  scrollbar-color: #4CAF50 #e0e0e0;
+    scrollbar-width: thin;
 }
+
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0 0 20px;
@@ -91,6 +95,20 @@ img {
 
 .navbar-toggler {
   display: none;
+}
+
+nav {
+  opacity: 0.9; /* Небольшая прозрачность */
+  transition: background-color 0.3s ease; /* Плавное изменение цвета фона при наведении */
+}
+
+nav:hover {
+  background-color: rgba(255, 255, 255, 0.8); /* Более плотный фон при наведении */
+}
+
+nav .navbar-brand,
+nav .nav-link {
+  color: #333; /* Темный цвет текста для контраста */
 }
 
 @media (max-width: 768px) {
