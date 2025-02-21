@@ -95,6 +95,7 @@ img {
 
 .navbar-toggler {
   display: none;
+  
 }
 
 nav {
@@ -111,11 +112,6 @@ nav .nav-link {
   color: #333; /* Темный цвет текста для контраста */
 }
 
-@media (max-width: 768px) {
-  .navbar-toggler {
-    display: block;
-  }
-}
 
 /* Стили для контактной информации */
 .contact-info {
@@ -144,12 +140,7 @@ nav .nav-link {
   justify-content: end; /* Сдвигаем меню вправо */
 }
 
-/* Скрытие контактной информации на маленьких экранах */
-@media (max-width: 991px) {
-  .contact-info {
-    display: none;
-  }
-}
+
 
 .header {
   position: fixed;
@@ -170,7 +161,7 @@ main {
 /* Section */
 section {
   display: flex;
-  align-items: stretch; /* Растягиваем содержимое по высоте */
+  align-items: center; /* Растягиваем содержимое по высоте */
   justify-content: space-between;
   background-color: #f9f9f9;
   
@@ -223,22 +214,7 @@ section .image img {
   display: block; /* Для правильной работы высоты */
 }
 
-/* Адаптивность */
-@media (max-width: 900px) {
-  section {
-    flex-direction: column; /* Меняем направление флекса на колонку */
-  }
 
-  section .image,
-  section .content {
-    flex-basis: 100%; /* Полная ширина для каждого элемента */
-    margin: 0; /* Сбрасываем внешние отступы */
-  }
-
-  section .image {
-    margin-bottom: 20px; /* Отступ между изображением и текстом */
-  }
-}
 
 .actions {
   display: flex;
@@ -500,8 +476,96 @@ section .image img {
 }
 
 
+/* Скрыть меню на малых экранах */
+.collapse {
+  display: none;
+}
 
-/* If you don't want the footer to be responsive, remove these media queries */
+/* Показать меню при клике на гамбургер */
+.collapse.show {
+  display: block;
+}
+
+
+/* Медиа*/
+
+@media (max-width: 768px) {
+  .logo {
+    width: 80px;
+    height: auto;
+  }
+  .menu-list {
+    display: none;
+  }
+  .contact-info {
+    display: none;
+  }
+  .navbar-toggler {
+    display: block;
+  }
+}
+
+/* Скрытие контактной информации на маленьких экранах */
+@media (max-width: 991px) {
+  .contact-info {
+    display: none;
+  }
+}
+
+    @media (max-width: 900px) {
+  section {
+    flex-direction: column; 
+  }
+
+  section .image,
+  section .content {
+    flex-basis: 100%; 
+    margin: 0; 
+  }
+
+  section .image {
+    margin-bottom: 20px; /* Отступ между изображением и текстом */
+  }
+}
+
+    @media (min-width: 768px) { /* Для экранов больше 768px */
+  section .image,
+  section .content {
+      flex-basis: 48%; /* Занимают примерно половину ширины */
+      margin: 0;
+  }
+}
+      @media (max-width: 992px) {
+  .navbar-toggler {
+    display: block;
+  }
+
+  .menu-list {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .menu-list li {
+    margin-bottom: 10px;
+  }
+
+  .menu-list li:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-toggler {
+    display: block;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .modal-content {
+      width: 90%; /* Изменяем ширину модального окна на маленьких экранах */
+  }
+}
 
 @media (max-width: 880px) {
 
@@ -524,52 +588,55 @@ section .image img {
 
 }
 
-@media (max-width: 768px) {
-  .logo {
-    width: 80px;
-    height: auto;
+
+
+
+@media (max-width: 880px) {
+  .footer-distributed {
+      flex-direction: column; /* Изменяем направление на колонку */
+      align-items: center; /* Выравниваем элементы по центру */
   }
-  .menu-list {
-    display: none;
+
+  .footer-distributed .footer-left,
+  .footer-distributed .footer-center,
+  .footer-distributed .footer-right
+  {
+      width: 100%; /* Занимаем всю ширину */
+      margin-bottom: 20px; /* Добавляем отступ снизу */
+      text-align: center; /* Текст по центру */
   }
-  .contact-info {
-    display: none;
+
+  .footer-distributed .footer-center i {
+      margin-left: 0; /* Убираем отступ слева для иконок */
   }
-  .navbar-toggler {
-    display: block;
-  }
+  .footer-distributed .footer-left .logo {
+    margin: 0 auto; /* Центрируем логотип по горизонтали */
+    margin-bottom: 10px; /* Добавляем отступ снизу от логотипа */
+}
+.footer-distributed .footer-left .logo img {
+  display: block; /* Убираем возможное пустое пространство под изображением */
+  max-width: 150px; /* Ограничиваем максимальную ширину логотипа */
+  height: auto; /* Сохраняем пропорции изображения */
 }
 
-/* Скрыть меню на малых экранах */
-.collapse {
-  display: none;
+.footer-distributed .footer-center {
+  width: 100%; /* Занимаем всю ширину */
+  margin-bottom: 20px; /* Добавляем отступ снизу */
+  text-align: center; /* Текст по центру */
 }
 
-/* Показать меню при клике на гамбургер */
-.collapse.show {
-  display: block;
+.footer-distributed .footer-center > div {
+  display: flex; /* Используем flexbox для каждого элемента (иконка + текст) */
+  flex-direction: column; /* Располагаем иконку и текст вертикально */
+  align-items: center; /* Выравниваем по центру */
+  margin-bottom: 10px; /* Отступ между элементами */
 }
 
-/* Подключаем медиа-запросы для мобильных устройств */
-@media (max-width: 992px) {
-  .navbar-toggler {
-    display: block;
-  }
-
-  .menu-list {
-    flex-direction: column;
-    align-items: start;
-  }
-
-  .menu-list li {
-    margin-bottom: 10px;
-  }
-
-  .menu-list li:last-child {
-    margin-bottom: 0;
-  }
+.footer-distributed .footer-center i {
+  margin-bottom: 5px; /* Отступ под иконкой */
 }
 
+}
 
 
 
