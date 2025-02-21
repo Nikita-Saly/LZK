@@ -298,17 +298,7 @@ section .image img {
 	width: 40%;
 }
 
-/* The company logo */
 
-.footer-distributed h3{
-	color:  #ffffff;
-	font: normal 36px 'Open Sans', cursive;
-	margin: 0;
-}
-
-.footer-distributed h3 span{
-	color:  lightseagreen;
-}
 
 /* Footer links */
 
@@ -329,14 +319,14 @@ section .image img {
 
 .footer-links {
   position: relative;
-  left: -10px; /* или любое другое значение */
+  left: -10px; 
 }
 
 
 /* Footer Center */
 
 .footer-center {
-  margin-left: auto; /* прижимаем элемент к правому краю */
+  margin-left: auto; 
 }
 
 .footer-distributed .footer-center{
@@ -377,7 +367,7 @@ section .image img {
 }
 
 .footer-distributed .footer-center p a{
-	color:  lightseagreen;
+	color:  rgb(241, 243, 243);
 	text-decoration: none;;
 }
 
@@ -439,19 +429,18 @@ section .image img {
 }
 
 .footer-info { 
-  margin-top: auto; /* Прижимаем к низу */
+  margin-top: auto; 
   width: 100%;
   text-align: center;
-  border-top: 2px solid #373838;
   padding-top: 10px;
   padding-bottom: 10px; /* добавляем padding снизу */
-  background-color: #a09b9b; /* или любой другой цвет фона */
-  color: #1a1919; /* или любой другой цвет текста */
+  background-color: #252525; 
+  color: #f0f0f0; /* или любой другой цвет текста */
 }
 
 
  .footer-company-name{
-	color:  #222;
+	color:  #f7f4f4;
 	font-size: 14px;
 	font-weight: normal;
 	margin: 0;
