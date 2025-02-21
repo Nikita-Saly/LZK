@@ -1,10 +1,10 @@
-/* Общие стили 
+/* Общие стили */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-*/
+
 
 html, body {
   font-family: 'Roboto', sans-serif;
@@ -273,14 +273,19 @@ section .image img {
 
 
 
-.footer-distributed{
-	background: #666;
-	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
-	box-sizing: border-box;
-	width: 100%;
-	text-align: left;
-	font: bold 16px sans-serif;
-	padding: 55px 50px;
+.footer-distributed {
+	background: #666; /* или любой другой цвет фона */
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 16px sans-serif;
+    padding: 55px 50px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 0; /* или оставить без изменения */
+    border-bottom-right-radius: 0; /* или оставить без изменения */
+    overflow: hidden; /* обрезаем выходящий за рамки контент */
 }
 
 .footer-distributed .footer-left,
