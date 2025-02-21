@@ -186,8 +186,17 @@ section .image {
 }
 
 section .content {
+  font-family: 'Arial', sans-serif; /* или 'Roboto', sans-serif; */
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
   flex-basis: 50%; /* Устанавливаем ширину текста */
   margin-right: 20px;
+}
+
+section .content p {
+  text-align: justify;
+  line-height: 1.6; /* или 160% */
 }
 
 section .image img {
@@ -222,31 +231,6 @@ section .image img {
 .actions li {
   list-style-type: none; /* Убираем маркеры списка */
 }
-
-
-
-/* Скрываем текстовую информацию по умолчанию */
-.text-info.hide {
-  display: none;
-}
-
-/* Показываем изображение по умолчанию */
-.image.object.show {
-  display: block;
-}
-
-/* Класс для отображения элементов */
-.show {
-  display: block;
-}
-
-/* Класс для скрытия элементов */
-.hide {
-  display: none;
-}
-
-
-
 
 /* Кнопки */
 .button.big {
@@ -319,11 +303,16 @@ section .image img {
 .footer-distributed .footer-links a{
 	display:inline-block;
 	line-height: 1.8;
+  
   font-weight:400;
 	text-decoration: none;
 	color:  inherit;
 }
 
+.footer-links {
+  position: relative;
+  left: -10px; /* или любое другое значение */
+}
 
 
 /* Footer Center */
@@ -449,6 +438,61 @@ section .image img {
 	font-weight: normal;
 	margin: 0;
 }
+
+
+/* Стиль для модального окна */
+.modal {
+  display: none; /* Скрыто по умолчанию */
+  position: fixed; /* Фиксированное положение */
+  z-index: 1; /* Самый высокий индекс */
+  left: 0;
+  top: 0;
+  width: 100%; /* Полная ширина */
+  height: 100%; /* Полная высота */
+  overflow: auto; /* Прокрутка, если необходимо */
+  background-color: rgba(0,0,0,0.4); /* Полупрозрачный фон */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% сверху и по центру */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%; /* 50% ширины */
+}
+
+.modal-content p {
+  text-align: justify;
+  hyphens: auto;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.modal-content h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.modal-content ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
 
 /* If you don't want the footer to be responsive, remove these media queries */
 
