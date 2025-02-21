@@ -18,18 +18,34 @@ function closeModalOutside(modalId, event) {
   }
 }
 
-const modal = document.getElementById('modal1');
-const menuLinks = document.querySelectorAll('a');
+const modal1 = document.getElementById('modal1');
+const menuLinks1 = document.querySelectorAll('a');
 
 window.addEventListener('click', (event) => {
-  if (event.target == modal) {
-    modal.style.display = 'none';
+  if (event.target == modal1) {
+    modal1.style.display = 'none';
   }
 });
 
-menuLinks.forEach(link => {
+menuLinks1.forEach(link => {
   link.addEventListener('click', () => {
-    modal.style.display = 'none';
+    modal1.style.display = 'none';
+  });
+});
+
+
+const modal2 = document.getElementById('modal2');
+const menuLinks2 = document.querySelectorAll('a');
+
+window.addEventListener('click', (event) => {
+  if (event.target == modal2) {
+    modal2.style.display = 'none';
+  }
+});
+
+menuLinks2.forEach(link => {
+  link.addEventListener('click', () => {
+    modal2.style.display = 'none';
   });
 });
 
