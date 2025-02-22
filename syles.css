@@ -1,0 +1,243 @@
+
+@media (max-width: 480px) {
+  
+  .modal {
+    background-color: #fefefe;
+    top: 125px;
+              
+  }
+  
+  
+  .modal-content {
+      width: 90%; /* Изменяем ширину модального окна на маленьких экранах */
+    }
+
+    .advantages-header {
+      font-size: 24px;
+    }
+  }
+  
+  
+  /* Медиа*/
+  @media (min-width: 576px) {
+    /* Стили для планшетов и компьютеров */
+    .navbar-toggler {
+      display: block;
+    }
+    section .image,
+    section .content {
+        flex-basis: 48%; /* Занимают примерно половину ширины */
+        margin: 0;
+    }
+    .logo {
+      width: 80px;
+      height: auto;
+    }
+    .menu-list {
+      display: none;
+    }
+    .contact-info {
+      display: none;
+    }
+    .navbar-toggler {
+      display: block;
+    }
+  
+    .modal {
+      background-color: #fefefe;
+      top: 125px;
+                
+    }
+  
+    .modal-content {
+      width: 80%; /* 90% ширины на маленьких экранах */
+      margin: 20px auto; /* Уменьшаем отступ сверху */
+      
+  }
+  .advantages-header {
+    font-size: 24px;
+  }
+  
+  .advantages-section {
+    flex-direction: column; /* Изменяем направление на колонку */
+    align-items: center; 
+  }
+  
+  .modal-content {
+    width: 75%; /* Изменяем ширину модального окна на маленьких экранах */
+  }
+  
+  
+    .hero {
+        padding: 100px 0;
+    }
+    
+    .hero h1 {
+        font-size: 22px;
+    }
+    
+    .hero p {
+        font-size: 18px;
+    }
+  
+    .advantage-item {
+      width: 100%;
+      
+  }
+  }
+  
+  
+  
+  
+  
+  @media (max-width: 768px) {
+    
+  
+      .navbar-toggler {
+        display: block;
+      }
+      section .image,
+      section .content {
+          flex-basis: 48%; /* Занимают примерно половину ширины */
+          margin: 0;
+      }
+      .logo {
+        width: 80px;
+        height: auto;
+      }
+      .menu-list {
+        display: none;
+      }
+      .contact-info {
+        display: none;
+      }
+      .navbar-toggler {
+        display: block;
+      }
+      .modal-content {
+        width: 90%; /* 90% ширины на маленьких экранах */
+        margin: 20px auto; /* Уменьшаем отступ сверху */
+        
+    }
+    
+      .hero {
+          padding: 100px 0;
+      }
+      
+      .hero h1 {
+          font-size: 32px;
+      }
+      
+      .hero p {
+        font-size: 18px;
+    }
+  
+    .advantage-item {
+      width: 100%;
+  }
+  .advantages-header {
+    font-size: 28px;
+  }
+  
+  }
+  
+  
+  @media (max-width: 880px) {
+  
+      .footer-distributed{
+          font: bold 14px sans-serif;
+      flex-direction: column; /* Изменяем направление на колонку */
+      align-items: center; /* Выравниваем элементы по центру */
+      }
+  
+      
+      .footer-distributed .footer-center i{
+          margin-left: 0;
+      margin-bottom: 5px; /* Отступ под иконкой */
+      }
+    
+  .footer-distributed .footer-left,
+  .footer-distributed .footer-center,
+  .footer-distributed .footer-right
+  {
+      width: 100%; /* Занимаем всю ширину */
+      margin-bottom: 20px; /* Добавляем отступ снизу */
+      text-align: center; /* Текст по центру */
+  }
+  
+  .footer-distributed .footer-left .logo {
+    margin: 0 auto; /* Центрируем логотип по горизонтали */
+    margin-bottom: 10px; /* Добавляем отступ снизу от логотипа */
+  }
+  .footer-distributed .footer-left .logo img {
+  display: block; /* Убираем возможное пустое пространство под изображением */
+  max-width: 120px; /* Ограничиваем максимальную ширину логотипа */
+  height: auto; /* Сохраняем пропорции изображения */
+  }
+  
+  
+  .footer-distributed .footer-center > div {
+  display: flex; /* Используем flexbox для каждого элемента (иконка + текст) */
+  flex-direction: column; /* Располагаем иконку и текст вертикально */
+  align-items: center; /* Выравниваем по центру */
+  margin-bottom: 10px; /* Отступ между элементами */
+  }
+  }
+  
+  
+  @media (max-width: 991px) {
+    .contact-info {
+      display: none;
+    }
+  }
+  
+     
+  
+    
+        @media (max-width: 992px) {
+    .navbar-toggler {
+      display: block;
+    }
+  }
+  
+  @media (max-width: 900px) {
+    section {
+      flex-direction: column; 
+    }
+  
+    section .image,
+    section .content {
+      flex-basis: 100%; 
+      margin: 0; 
+    }
+  
+    section .image {
+      margin-bottom: 20px; /* Отступ между изображением и текстом */
+    }
+  }
+  
+  /* Скрытие контактной информации на маленьких экранах */
+  
+     @media (max-width: 1024px) {
+    .contact-info {
+      display: none;
+   }
+          
+  
+    .navbar-toggler {
+      display: block;
+    }
+  
+    .menu-list {
+      flex-direction: column;
+      align-items: start;
+    }
+  
+    .menu-list li {
+      margin-bottom: 10px;
+    }
+  
+    .menu-list li:last-child {
+      margin-bottom: 0;
+    }
+  }
