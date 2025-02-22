@@ -15,6 +15,21 @@ html, body {
     scrollbar-width: thin;
 }
 
+.header {
+  position: fixed;
+  top: 15px;
+  left: 0;
+  right: 0;
+  height: 50px;
+  z-index: 102;
+  
+}
+
+
+main {
+  padding-top: 200px;
+}
+
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0 0 20px;
@@ -69,8 +84,8 @@ img {
   margin-bottom: 14px;
 }
 
-.navbar {
-  background-color: #fafafa; /* Очень светлый серый оттенок */
+.custom-navbar {
+  background-color: #4CAF50; /* Замените на нужный вам цвет */
 }
 
 .navbar-brand {
@@ -142,19 +157,7 @@ nav .nav-link {
 
 
 
-.header {
-  position: fixed;
-  top: 15px;
-  left: 0;
-  right: 0;
-  height: 50px;
-  z-index: 102;
-  background-color: white;
-}
 
-main {
-  padding-top: 200px;
-}
 
 
 
@@ -164,19 +167,15 @@ section {
   align-items: center; /* Растягиваем содержимое по высоте */
   justify-content: space-between;
   background-color: #f9f9f9;
-  
   padding: 40px;
   margin-bottom: 20px;
   margin-left: 45px;
   margin-right: 45px;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
-  border: 1px solid #ddd;
-  border-radius: 60px;
+  
+  
 }
 
-section:nth-child(even) {
-  background-color: #eaeaea;
-}
+
 
 section.special-section {
   background-image: linear-gradient(to right, #4facfe, #00f2fe);
@@ -184,7 +183,7 @@ section.special-section {
 }
 
 section + section {
-  border-top: 1px solid #ccc;
+  
   padding-top: 60px;
 }
 
@@ -254,11 +253,9 @@ section .image img {
   text-align: left;
   font: bold 20px sans-serif;
   padding: 55px 50px;
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
-  border-bottom-left-radius: 0; /* или оставить без изменения */
-  border-bottom-right-radius: 0; /* или оставить без изменения */
-  overflow: hidden; /* обрезаем выходящий за рамки контент */
+  
+ 
+  
 }
 
 .footer-distributed .footer-left,
