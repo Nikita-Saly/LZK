@@ -272,66 +272,77 @@ section .image img {
   background-color: #478a49;
 }
 
-
-/* Стили для формы обратной связи */
-
-.questionsBlock-card {
-  margin-bottom: 20px;
-  line-height: 1;
-  font-family: "Lab Grotesque", Arial, sans-serif !important;
-  font-style: normal;
-  font-weight: normal;
-  color: #222222;
-  -webkit-font-smoothing: antialiased;
-  display: block;
-  min-width: 272px;
-  width: 1120px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-top: 72px;
-  padding-bottom: 72px;
+.advantages-header {
+  text-align: center;
+  color: #333;
+  font-size: 32px;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  
 }
 
-.questionsBlock-content {
+
+.advantages-section {
   display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
   justify-content: space-between;
-  align-items: center;
+  
 }
 
-.questionsBlock-description {
-  flex: 1;
-}
 
-.questionsBlock-formAndPolicy {
+ul.advantages-list {
+  list-style-type: none;
+  padding-left: 0;
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  align-items: stretch;
+  gap: 30px;
+  justify-content: space-between; /* Распределяем блоки равномерно */
+  
+  
 }
 
-.questionsBlock-formAndPolicy .button-caption-wrap {
+li.advantage-item {
+  display: flex;
+  flex-direction: column;  /* Располагаем иконку и текст вертикально */
+  align-items: center; 
+  width: calc((100% / 3) - 20px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  background-color: white;
+  text-align: center;
+  min-width: 200px; /* Минимальная ширина блока */
+}
+
+.advantage-icon {
+  
+  font-size: 48px;
+  color: #4CAF50;
+  margin-bottom: 10px;
+  width: 48px; /* Ширина иконок по умолчанию */
+  height: 48px; /* Высота иконок по умолчанию */
+}
+
+.advantage-details {
+  text-align: justify;
+  text-align: left;
+}
+
+.advantage-title {
+  font-weight: bold;
+  font-size: 18px;
   margin-bottom: 10px;
 }
 
-.questionsBlock-policy {
-  text-align: right;
+.advantage-text {
+  text-align: justify;
+  line-height: 1.5;
+  color: #666;
 }
 
-.button-caption-wrap .button-text {
-  display: inline-block;
-  padding: 12px 24px;
-  background-color: #4CAF50;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
-  text-align: center;
-}
-
-.button-caption-wrap .button-text:hover {
-  background-color: #478a49;
-}
 
 /* footer */
 
@@ -346,9 +357,6 @@ section .image img {
   text-align: left;
   font: bold 20px sans-serif;
   padding: 55px 50px;
-  
- 
-  
 }
 
 .footer-distributed .footer-left,
@@ -591,13 +599,16 @@ section .image img {
   .modal {
     background-color: #fefefe;
     top: 125px;
-           
-    
+              
   }
   
   
   .modal-content {
       width: 90%; /* Изменяем ширину модального окна на маленьких экранах */
+  }
+
+  .advantages-header {
+    font-size: 24px;
   }
 }
 
@@ -640,6 +651,14 @@ section .image img {
   .hero p {
       font-size: 18px;
   }
+
+  .advantage-item {
+    width: 100%;
+}
+.advantages-header {
+  font-size: 28px;
+}
+
 }
 
 
