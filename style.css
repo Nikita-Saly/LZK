@@ -20,14 +20,14 @@ html, body {
   top: 15px;
   left: 0;
   right: 0;
-  height: 50px;
+  
   z-index: 102;
   
 }
 
 
 main {
-  padding-top: 200px;
+  margin-top:120px; /* Отступ сверху */         
 }
 
 
@@ -69,13 +69,25 @@ img {
 }
 
 
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #478a49;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
 }
-
-
 
 .logo {
   display: inline-block;
@@ -114,7 +126,7 @@ img {
 }
 
 nav {
-  opacity: 0.9; /* Небольшая прозрачность */
+  height: 90px;
   transition: background-color 0.3s ease; /* Плавное изменение цвета фона при наведении */
 }
 
@@ -125,6 +137,7 @@ nav:hover {
 nav .navbar-brand,
 nav .nav-link {
   color: #333; /* Темный цвет текста для контраста */
+  line-height: 60px;
 }
 
 
@@ -155,9 +168,36 @@ nav .nav-link {
   justify-content: end; /* Сдвигаем меню вправо */
 }
 
+/* Стили для секции hero */
+.hero {
+ 
+  background-size: cover; /* Масштабирует изображение, чтобы оно полностью покрывало элемент */
+    background-position: center; /* Центрирует изображение */
+    background-repeat: no-repeat;
+    color: white;
+    padding: 80px 40px;
+    text-align: center;
+    margin: 0 45px; /* Устанавливаем такие же отступы, как у других секций */
+    position: relative;
+  }
 
+  .background-image {
+    filter: brightness(50%) contrast(150%);
+  }
 
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #FFFFFF; /* Белый цвет текста */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Тень для улучшения читаемости */
+}
 
+.hero p {
+  font-size: 22px;
+  margin-bottom: 30px;
+  color: #FFFFFF; /* Белый цвет текста */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Тень для улучшения читаемости */
+}
 
 
 
@@ -169,28 +209,17 @@ section {
   background-color: #f9f9f9;
   padding: 40px;
   margin-bottom: 20px;
-  margin-left: 45px;
-  margin-right: 45px;
-  
-  
-}
-
-
-
-section.special-section {
-  background-image: linear-gradient(to right, #4facfe, #00f2fe);
-  color: white;
 }
 
 section + section {
-  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Добавляем тень */
   padding-top: 60px;
 }
 
 section .image {
   flex-basis: 50%; /* Устанавливаем ширину изображения */
   margin-left: 20px;
-  border-radius: 10px;
+  
 }
 
 section .content {
@@ -211,6 +240,7 @@ section .image img {
   width: 100%; /* Изображение занимает всю доступную ширину */
   height: auto; /* Сохраняем пропорции изображения */
   display: block; /* Для правильной работы высоты */
+  border-radius: 0; /* Убираем скругление */
 }
 
 
@@ -229,7 +259,7 @@ section .image img {
 .button.big {
   display: inline-block;
   padding: 12px 24px;
-  background-color: #71be59;
+  background-color: #4CAF50;
   color: #fff;
   text-decoration: none;
   border-radius: 4px;
@@ -238,9 +268,44 @@ section .image img {
 }
 
 .button.big:hover {
-  background-color: #259751;
+  background-color: #478a49;
 }
 
+
+/* Стили для формы обратной связи */
+.cta form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.cta input,
+.cta textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.cta button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4CAF50;;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta button:hover {
+  background-color: #478a49;
+}
+
+
+/* footer */
 
 .footer-distributed {
   display: flex;
@@ -535,6 +600,18 @@ section .image img {
     margin: 20px auto; /* Уменьшаем отступ сверху */
     
 }
+
+  .hero {
+      padding: 100px 0;
+  }
+  
+  .hero h1 {
+      font-size: 32px;
+  }
+  
+  .hero p {
+      font-size: 18px;
+  }
 }
 
 
