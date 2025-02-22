@@ -98,7 +98,7 @@ img {
 }
 
 .custom-navbar {
-  background-color: #4CAF50; /* Замените на нужный вам цвет */
+  background-color: #4CAF50; 
 }
 
 .navbar-brand {
@@ -108,7 +108,7 @@ img {
 }
 
 .navbar-nav .nav-link {
-  font-size: 18px; /* Увеличиваем размер текста */
+  font-size: 18px; 
   
 }
 .navbar-light .navbar-nav .nav-link {
@@ -283,12 +283,15 @@ section .image img {
 
 
 .advantages-section {
-  display: flex;
-  max-width: 1200px;
+  width: 1200px;
+  display: grid;
+  grid-template-rows: (4, 1fr);
+  grid-template-columns: (4, 1fr);
+  gap: 8px;
   margin: 0 auto;
   padding: 20px;
   text-align: center;
-  justify-content: space-between;
+  
   
 }
 
@@ -297,6 +300,7 @@ ul.advantages-list {
   list-style-type: none;
   padding-left: 0;
   display: flex;
+  
   align-items: stretch;
   gap: 30px;
   justify-content: space-between; /* Распределяем блоки равномерно */
@@ -592,25 +596,76 @@ li.advantage-item {
 
 
 /* Медиа*/
+@media (min-width: 576px) {
+  /* Стили для планшетов и компьютеров */
+  .navbar-toggler {
+    display: block;
+  }
+  section .image,
+  section .content {
+      flex-basis: 48%; /* Занимают примерно половину ширины */
+      margin: 0;
+  }
+  .logo {
+    width: 80px;
+    height: auto;
+  }
+  .menu-list {
+    display: none;
+  }
+  .contact-info {
+    display: none;
+  }
+  .navbar-toggler {
+    display: block;
+  }
 
-
-@media (max-width: 480px) {
-  
   .modal {
     background-color: #fefefe;
     top: 125px;
               
   }
-  
-  
+
   .modal-content {
-      width: 90%; /* Изменяем ширину модального окна на маленьких экранах */
+    width: 80%; /* 90% ширины на маленьких экранах */
+    margin: 20px auto; /* Уменьшаем отступ сверху */
+    
+}
+.advantages-header {
+  font-size: 24px;
+}
+
+.advantages-section {
+  flex-direction: column; /* Изменяем направление на колонку */
+  align-items: center; 
+}
+
+.modal-content {
+  width: 75%; /* Изменяем ширину модального окна на маленьких экранах */
+}
+
+
+  .hero {
+      padding: 100px 0;
+  }
+  
+  .hero h1 {
+      font-size: 22px;
+  }
+  
+  .hero p {
+      font-size: 18px;
   }
 
-  .advantages-header {
-    font-size: 24px;
-  }
+  .advantage-item {
+    width: 100%;
+    
 }
+}
+
+
+
+
 
 @media (max-width: 768px) {
   .navbar-toggler {
@@ -634,18 +689,38 @@ li.advantage-item {
   .navbar-toggler {
     display: block;
   }
+
+  .modal {
+    background-color: #fefefe;
+    top: 125px;
+              
+  }
+
   .modal-content {
-    width: 90%; /* 90% ширины на маленьких экранах */
+    width: 80%; /* 90% ширины на маленьких экранах */
     margin: 20px auto; /* Уменьшаем отступ сверху */
     
 }
+.advantages-header {
+  font-size: 24px;
+}
+
+.advantages-section {
+  flex-direction: column; /* Изменяем направление на колонку */
+  align-items: center; 
+}
+
+.modal-content {
+  width: 75%; /* Изменяем ширину модального окна на маленьких экранах */
+}
+
 
   .hero {
       padding: 100px 0;
   }
   
   .hero h1 {
-      font-size: 32px;
+      font-size: 22px;
   }
   
   .hero p {
@@ -691,7 +766,7 @@ li.advantage-item {
 }
 .footer-distributed .footer-left .logo img {
 display: block; /* Убираем возможное пустое пространство под изображением */
-max-width: 150px; /* Ограничиваем максимальную ширину логотипа */
+max-width: 120px; /* Ограничиваем максимальную ширину логотипа */
 height: auto; /* Сохраняем пропорции изображения */
 }
 
@@ -721,16 +796,13 @@ margin-bottom: 10px; /* Отступ между элементами */
 }
 
 /* Скрытие контактной информации на маленьких экранах */
-@media (max-width: 991px) {
+
+   @media (max-width: 1024px) {
   .contact-info {
     display: none;
-  }
-}
+ }
+        
 
-   
-
-  
-      @media (max-width: 992px) {
   .navbar-toggler {
     display: block;
   }
