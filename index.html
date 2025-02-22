@@ -195,11 +195,17 @@
 <!-- Призыв к действию (CTA) -->
 <section id="cta" class="cta">
   <div class="container">
-      <h2>Оставьте заявку на консультацию прямо сейчас!</h2>
-      <form action="#" method="post">
-          <input type="text" placeholder="Ваше имя">
-          <input type="tel" placeholder="Ваш телефон">
-          <textarea placeholder="Сообщение"></textarea>
+      <h2 class="cta-title">Оставьте заявку на консультацию прямо сейчас!</h2>
+      <form action="https://forms.yandex.ru/u/67b9b65b90fa7b557fc78556" method="post">
+          <label for="name">Ваше имя:</label><br>
+          <input type="text" id="name" name="name" placeholder="Ваше имя" required><br><br>
+
+          <label for="phone">Ваш телефон:</label><br>
+          <input type="tel" id="phone" name="phone" placeholder="Ваш телефон" required><br><br>
+
+          <label for="message">Сообщение:</label><br>
+          <textarea id="message" name="message" placeholder="Сообщение"></textarea><br><br>
+
           <button type="submit">Отправить</button>
       </form>
   </div>
