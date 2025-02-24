@@ -945,9 +945,18 @@ li.advantage-item {
     font-size: 14px;
   }
 
+  .advantages-list {
+    flex-wrap: wrap; /* Разрешать перенос элементов на новую строку */
+  }
+  
   .advantage-item {
-    width: 100%;
-    min-width: auto;
+    width: calc(50% - 10px); /* Занимаем половину ширины экрана минус отступы */
+    margin-bottom: 20px; /* Отступ между строками */
+    box-sizing: border-box; /* Включаем padding и border в ширину блока */
+  }
+  
+  .advantage-item:nth-child(odd) {
+    margin-right: 20px; /* Добавляем отступ справа для нечетных элементов */
   }
 
   .footer-distributed {
@@ -1045,6 +1054,17 @@ li.advantage-item {
       justify-content: center;
       margin-top: 15px;
     }
+
+    .advantage-item {
+      width: 100%; /* Каждый элемент занимает всю ширину строки */
+      margin-right: 0; /* Убираем горизонтальные отступы */
+    }
+
+
+
+
+
+
     .footer-distributed {
       text-align: center;
       padding: 15px;
@@ -1054,9 +1074,6 @@ li.advantage-item {
   .footer-center {
     justify-content: center;
   }
-
-  
-    
   
     .footer-left .logo img {
       width: 80px;
@@ -1066,21 +1083,14 @@ li.advantage-item {
     .footer-left p {
       font-size: 14px;
     }
-  
-    .footer-links {
     
-      
-    }
-  
     .footer-links a {
       display: block; /* Переносим ссылки в отдельные строки */
     text-align: left; 
-   
-    }
+   }
   
     .footer-center {
-      
-      font-size: 14px;
+     font-size: 14px;
     }
   
     .footer-center i {
