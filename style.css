@@ -1,10 +1,8 @@
-/* Общие стили */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 
 html, body {
   font-family: 'Roboto', sans-serif;
@@ -20,17 +18,12 @@ html, body {
   top: 15px;
   left: 0;
   right: 0;
-  
-   /*надо добавить медиа*/
   z-index: 102;
-  
-}
-
+  }
 
 main {
   margin-top:120px; /* Отступ сверху */         
 }
-
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0 0 20px;
@@ -59,16 +52,12 @@ a:hover {
   border-radius: 15px; /* Радиус скругления углов */
 }
 
-
-
-
 img {
   max-width: 100%;
   height: auto;
   display: block;
   border-radius: 15px;
 }
-
 
 .btn {
   display: inline-block;
@@ -109,12 +98,11 @@ img {
 
 .navbar-nav .nav-link {
   font-size: 18px; 
-  
-}
+  }
+
 .navbar-light .navbar-nav .nav-link {
   color: black;
 }
-
 
 .navbar-light .navbar-nav .nav-link.active,
 .navbar-light .navbar-nav .nav-link:hover {
@@ -140,7 +128,6 @@ nav .nav-link {
   color: #333; /* Темный цвет текста для контраста */
   line-height: 60px;
 }
-
 
 /* Стили для контактной информации */
 .contact-info {
@@ -171,8 +158,7 @@ nav .nav-link {
 
 /* Стили для секции hero */
 .hero {
- 
-  background-size: cover; /* Масштабирует изображение, чтобы оно полностью покрывало элемент */
+   background-size: cover; /* Масштабирует изображение, чтобы оно полностью покрывало элемент */
     background-position: center; /* Центрирует изображение */
     background-repeat: no-repeat;
     color: white;
@@ -200,8 +186,6 @@ nav .nav-link {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Тень для улучшения читаемости */
 }
 
-
-
 /* Section */
 section {
   display: flex;
@@ -220,8 +204,7 @@ section + section {
 section .image {
   flex-basis: 50%; /* Устанавливаем ширину изображения */
   margin-left: 20px;
-  
-}
+  }
 
 section .content {
   font-family: 'Arial', sans-serif; /* или 'Roboto', sans-serif; */
@@ -243,8 +226,6 @@ section .image img {
   display: block; /* Для правильной работы высоты */
   border-radius: 0; /* Убираем скругление */
 }
-
-
 
 .actions {
   display: flex;
@@ -281,7 +262,6 @@ section .image img {
   
 }
 
-
 .advantages-section {
   width: 1200px;
   display: grid;
@@ -291,10 +271,7 @@ section .image img {
   margin: 0 auto;
   padding: 20px;
   text-align: center;
-  
-  
 }
-
 
 ul.advantages-list {
   list-style-type: none;
@@ -304,8 +281,6 @@ ul.advantages-list {
   align-items: stretch;
   gap: 30px;
   justify-content: space-between; /* Распределяем блоки равномерно */
-  
-  
 }
 
 li.advantage-item {
@@ -347,7 +322,6 @@ li.advantage-item {
   color: #666;
 }
 
-
 /* footer */
 
 .footer-distributed {
@@ -375,8 +349,6 @@ li.advantage-item {
 .footer-distributed .footer-left{
 	width: 40%;
 }
-
-
 
 /* Footer links */
 
@@ -516,14 +488,12 @@ li.advantage-item {
   color: #16a83b; /* или любой другой цвет текста */
 }
 
-
  .footer-company-name{
 	color:  #070707;
 	font-size: 14px;
 	font-weight: normal;
 	margin: 0;
 }
-
 
 /* Стиль для модального окна */
 .modal {
@@ -544,10 +514,7 @@ li.advantage-item {
     padding: 20px;
     border: 1px solid #888;
     width: 80%; /* 80% ширины */
-    
-    
-  
-}
+  }
 
 .modal-content p {
   text-align: justify;
@@ -566,8 +533,6 @@ li.advantage-item {
   list-style-type: disc;
   margin-left: 20px;
 }
-
-
 
 .close {
   color: #aaa;
@@ -593,9 +558,191 @@ li.advantage-item {
 .collapse.show {
   display: block;
 }
+/* Медиа-запросы для адаптивности */
 
+/* Десктопы (1200px и выше) */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}
 
+/* Ноутбуки и планшеты в горизонтальном положении (992px - 1199px) */
+@media (max-width: 1199px) {
+  .container {
+    max-width: 960px;
+  }
 
+  .hero {
+    padding: 60px 30px;
+  }
+
+  .advantages-section {
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .navbar-toggler {
+    display: block; /* Показываем кнопку-гамбургер */
+    border: none;
+    background: transparent;
+  }
+
+  .navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  .navbar-collapse {
+    background-color: #4CAF50; /* Цвет фона для раскрывающегося меню */
+    text-align: center;
+    padding: 10px;
+  }
+  .navbar-nav {
+    flex-direction: column; /* Выстраиваем ссылки в колонку */
+    align-items: center;
+  }
+
+  .navbar-nav .nav-item {
+    margin-bottom: 10px;
+  }
+  .navbar-brand {
+    font-size: 16px;
+  }
+
+  .contact-info {
+    font-size: 14px;
+  }
+
+  .contact-info i {
+    font-size: 18px;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 14px;
+  }
+
+  /* Скрываем логотип */
+  .logo {
+    display: none;
+  }
+
+}
+
+/* Планшеты (768px - 991px) */
+@media (max-width: 991px) {
+  .container {
+    max-width: 720px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+  }
+
+  .advantages-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .navbar-brand {
+    font-size: 14px;
+  }
+
+  .contact-info {
+    font-size: 12px;
+  }
+
+  .contact-info i {
+    font-size: 16px;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 12px;
+  }
+
+}
+
+/* Телефоны (576px - 767px) */
+@media (max-width: 767px) {
+  .container {
+    max-width: 540px;
+  }
+
+  .hero {
+    padding: 40px 20px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .footer-distributed {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .advantages-section {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .navbar-brand {
+    font-size: 14px;
+  }
+
+  .contact-info {
+    font-size: 12px;
+  }
+
+  .contact-info i {
+    font-size: 16px;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 12px;
+  }
+
+}
+
+/* Маленькие телефоны (до 575px) */
+@media (max-width: 575px) {
+  .container {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .hero {
+    padding: 30px 15px;
+  }
+
+  .hero h1 {
+    font-size: 24px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .advantage-item {
+    width: 100%;
+    min-width: auto;
+  }
+
+  .footer-distributed {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px;
+  }
+}
 
 
 
