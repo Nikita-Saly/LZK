@@ -361,7 +361,6 @@ li.advantage-item {
 .footer-distributed .footer-links a{
 	display:inline-block;
 	line-height: 1.8;
-  
   font-weight:400;
 	text-decoration: none;
 	color:  inherit;
@@ -429,9 +428,7 @@ li.advantage-item {
   padding-right: 5px;
 }
 
-.footer-distributed .footer-links .link-1:before {
-  content: none;
-}
+
 
 /* Footer Right */
 
@@ -623,6 +620,7 @@ li.advantage-item {
 
   .footer-links {
     font-size: 15px;
+    
   }
 
   .footer-center  {
@@ -662,6 +660,21 @@ li.advantage-item {
     padding: 10px 20px;
     font-size: 14px;
   }
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    
+    gap: 5px; /* Отступ между ссылками */
+  }
+
+  .footer-links a {
+    position: relative;
+    display: inline-block;
+    white-space: nowrap; /* Запрещаем перенос слов */
+  }
+
+  
+
 }
 
 
@@ -726,9 +739,8 @@ li.advantage-item {
   }
 
   .footer-links {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    
+    
     gap: 10px;
     font-size: 14px;
   }
@@ -861,14 +873,22 @@ li.advantage-item {
 
   .footer-left .logo img {
     width: 80px;
+    
+  }
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Элементы слева */
   }
 
   .footer-left p {
     font-size: 14px;
   }
 
-  .footer-links {
-    font-size: 13px;
+  .footer-links a {
+    display: block; /* Переносим ссылки в отдельные строки */
+    text-align: left; 
   }
 
   .footer-center {
@@ -943,9 +963,7 @@ li.advantage-item {
   }
 
   
-    .footer-left {
-      margin-bottom: 20px;
-    }
+    
   
     .footer-left .logo img {
       width: 80px;
@@ -956,10 +974,12 @@ li.advantage-item {
       font-size: 14px;
     }
   
-    .footer-links {
-      display: flex;
-      flex-direction: column;
-      gap: 5px;
+
+    .footer-links a {
+      display: block; /* Переносим ссылки в отдельные строки */
+    text-align: left; 
+     
+      
     }
   
     .footer-center{
@@ -1036,9 +1056,7 @@ li.advantage-item {
   }
 
   
-    .footer-left {
-      margin-bottom: 20px;
-    }
+    
   
     .footer-left .logo img {
       width: 80px;
@@ -1050,9 +1068,14 @@ li.advantage-item {
     }
   
     .footer-links {
-      display: flex;
-      flex-direction: column;
-      gap: 5px;
+    
+      
+    }
+  
+    .footer-links a {
+      display: block; /* Переносим ссылки в отдельные строки */
+    text-align: left; 
+   
     }
   
     .footer-center {
