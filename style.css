@@ -697,6 +697,10 @@ li.advantage-item {
   }
   .navbar-brand {
     font-size: 14px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap; /* Чтобы текст не переносился */
   }
 
   .contact-info {
@@ -704,11 +708,19 @@ li.advantage-item {
   }
 
   .contact-info i {
-    font-size: 16px;
+    font-size: 12px;
+    flex-grow: 1; /* Растягиваем, чтобы номер телефона оставался слева */
   }
 
   .navbar-nav .nav-link {
     font-size: 12px;
+  }
+  .navbar-toggler {
+    margin-left: auto; /* Кнопка-гамбургер уходит вправо */
+  }
+
+  .logo {
+    display: none; /* Скрываем логотип */
   }
 
 }
@@ -718,6 +730,34 @@ li.advantage-item {
   .container {
     max-width: 100%;
     padding: 0 10px;
+  }
+
+  .navbar-brand {
+    font-size: 14px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap; /* Чтобы текст не переносился */
+  }
+
+  .contact-info {
+    font-size: 12px;
+  }
+
+  .contact-info i {
+    font-size: 12px;
+    flex-grow: 1; /* Растягиваем, чтобы номер телефона оставался слева */
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 12px;
+  }
+  .navbar-toggler {
+    margin-left: auto; /* Кнопка-гамбургер уходит вправо */
+  }
+
+  .logo {
+    display: none; /* Скрываем логотип */
   }
 
   .hero {
