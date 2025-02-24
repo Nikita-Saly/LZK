@@ -603,6 +603,34 @@ li.advantage-item {
     width: 100%;
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .footer-distributed {
+    padding: 30px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .footer-left, .footer-center {
+    width: 100%;
+  }
+
+  .footer-left .logo img {
+    width: 100px;
+    height: auto;
+  }
+
+  .footer-left p {
+    font-size: 16px;
+  }
+
+  .footer-links {
+    font-size: 15px;
+  }
+
+  .footer-center div {
+    font-size: 15px;
+    margin-top: 20px;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -682,6 +710,33 @@ li.advantage-item {
   /* Скрываем логотип */
   .logo {
     display: none;
+  }
+
+  .footer-distributed {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-left {
+    margin-bottom: 20px;
+  }
+
+  .footer-left .logo img {
+    width: 90px;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    font-size: 14px;
+  }
+
+  .footer-center div {
+    font-size: 14px;
   }
 
 }
@@ -795,13 +850,32 @@ li.advantage-item {
     padding: 8px 16px;
     font-size: 12px;
   }
-  .footer-distributed {
-    flex-direction: column;
-    text-align: center;
-  }
-
+  
   .advantages-section {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .footer-distributed {
+    flex-direction: column;
+    padding: 2px;
+  }
+
+  .footer-left .logo img {
+    width: 80px;
+  }
+
+  .footer-left p {
+    font-size: 14px;
+  }
+
+  .footer-links {
+    font-size: 13px;
+  }
+
+  .footer-center div {
+    font-size: 13px;
+    flex-direction: column;
+    gap: 5px;
   }
   
 }
@@ -908,6 +982,48 @@ li.advantage-item {
     .actions {
       justify-content: center;
       margin-top: 15px;
+    }
+    .footer-distributed {
+      text-align: center;
+      padding: 20px;
+    }
+  
+    .footer-left {
+      margin-bottom: 20px;
+    }
+  
+    .footer-left .logo img {
+      width: 80px;
+      height: auto;
+    }
+  
+    .footer-left p {
+      font-size: 14px;
+    }
+  
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+  
+    .footer-center div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 14px;
+    }
+  
+    .footer-center i {
+      margin-bottom: 5px;
+    }
+  
+    .footer-center p {
+      margin: 5px 0;
+    }
+  
+    .footer-center a {
+      font-size: 14px;
     }
   }
 
