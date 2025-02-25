@@ -10,7 +10,7 @@ html, body {
   line-height: 1.6;
   scroll-behavior: smooth;
   scrollbar-color: #4CAF50 #e0e0e0;
-    scrollbar-width: thin;
+  scrollbar-width: thin;
 }
 
 .header {
@@ -26,10 +26,15 @@ main {
   margin-top:120px; /* Отступ сверху */         
 }
 
-h1, h2, h3, h4, h5, h6 {
+ h2, h3, h4, h5, h6 {
   margin: 0 0 20px;
-}
+  }
 
+h1{
+  font-family: "Pacifico", serif;
+  font-weight: 400;
+  font-style: normal;
+}
 p {
   margin: 0 0 10px;
 }
@@ -94,13 +99,19 @@ img {
 }
 
 .navbar-brand {
-  font-weight: bold;
+  font-family: "Pacifico", serif;
+  font-weight: 400;
+  font-style: normal;
   color: black;
   margin-right: 25px;
+  font-family: 22px;
 }
 
 .navbar-nav .nav-link {
-  font-size: 18px; 
+  font-size: 22px; 
+  font-family: "Pacifico", serif;
+  font-weight: 400;
+  font-style: normal;
   }
 
 .navbar-light .navbar-nav .nav-link {
@@ -136,6 +147,10 @@ nav .nav-link {
 .contact-info {
   display: flex;
   align-items: center;
+  font-family: "Pacifico", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 22px;
 }
 
 .contact-info i {
@@ -179,7 +194,7 @@ nav .nav-link {
   font-size: 48px;
   margin-bottom: 20px;
   color: #FFFFFF; /* Белый цвет текста */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Тень для улучшения читаемости */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Тень для улучшения читаемости */
 }
 
 .hero p {
@@ -304,8 +319,8 @@ li.advantage-item {
   font-size: 48px;
   color: #4CAF50;
   margin-bottom: 10px;
-  width: 48px; /* Ширина иконок по умолчанию */
-  height: 48px; /* Высота иконок по умолчанию */
+  width: 48px; 
+  height: 48px; 
 }
 
 .advantage-details {
@@ -329,15 +344,17 @@ li.advantage-item {
 
 .footer-distributed {
   display: flex;
-  justify-content: space-between; /* распределяем элементы по краям */
-  align-items: center; /* выравниваем элементы по вертикали */
-	
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  justify-content: space-between; 
+  align-items: center; 
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
   box-sizing: border-box;
   width: 100%;
   text-align: left;
-  font: bold 20px sans-serif;
   padding: 55px 50px;
+  font-family: "Pacifico", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 22px;
 }
 
 .footer-distributed .footer-left,
