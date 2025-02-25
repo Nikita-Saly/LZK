@@ -214,13 +214,17 @@ section {
   margin-bottom: 20px;
 }
 
+.title_cont {
+  text-align: center;
+}
+
 section + section {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Добавляем тень */
   padding-top: 60px;
 }
 
 section .image {
-  flex-basis: 50%; /* Устанавливаем ширину изображения */
+  flex-basis: 40%; /* Устанавливаем ширину изображения */
   margin-left: 20px;
   }
 
