@@ -341,9 +341,7 @@ li.advantage-item {
 }
 
 .footer-distributed .footer-left,
-.footer-distributed .footer-center,
-.footer-distributed .footer-right{
-	display: inline-block;
+.footer-distributed .footer-center {
 	vertical-align: top;
 }
 
