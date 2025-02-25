@@ -184,6 +184,7 @@ nav .nav-link {
     text-align: center;
     margin: 0 45px; /* Устанавливаем такие же отступы, как у других секций */
     position: relative;
+    
   }
 
   .background-image {
@@ -195,6 +196,7 @@ nav .nav-link {
   margin-bottom: 20px;
   color: #FFFFFF; /* Белый цвет текста */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Тень для улучшения читаемости */
+    
 }
 
 .hero p {
@@ -202,6 +204,7 @@ nav .nav-link {
   margin-bottom: 30px;
   color: #FFFFFF; /* Белый цвет текста */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Тень для улучшения читаемости */
+  
 }
 
 /* Section */
