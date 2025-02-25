@@ -890,10 +890,21 @@ li.advantage-item {
   }
 
   .footer-center {
-    font-size: 13px;
     
+    display: flex;
+    flex-direction: column; /* Располагаем элементы в колонку */
+    align-items: center;
+    justify-content: space-between; /* Размещаем элементы по центру */
+    padding-right: 100px;
+    font-size: 13px;
+    }
+
+    .footer-center div {
+      
+      display: flex;
+      align-items: center; /* Выравнивание элементов внутри блока по вертикали */
+      margin-bottom: 10px; /* Добавляем отступ между элементами */
   }
-  
 }
 
 /* Маленькие телефоны (до 575px) */
@@ -963,6 +974,7 @@ li.advantage-item {
 
     .footer-left,
   .footer-center {
+    
     justify-content: center;
   }
 
@@ -987,9 +999,19 @@ li.advantage-item {
     }
   
     .footer-center{
-      
+      display: flex;
+    flex-direction: column; /* Располагаем элементы в колонку */
+      align-items: center;
+    justify-content: space-between; /* Размещаем элементы по центру */
+      padding-right: 100px;
       font-size: 14px;
     }
+
+    .footer-center div {
+      display: flex;
+      align-items: center; /* Выравнивание элементов внутри блока по вертикали */
+      margin-bottom: 10px; /* Добавляем отступ между элементами */
+  }
   
     .footer-center i {
       margin-bottom: 5px;
@@ -1085,8 +1107,18 @@ li.advantage-item {
    }
   
     .footer-center {
+      display: flex;
+      flex-direction: column; /* Располагаем элементы в колонку */
+      align-items: center; /* Центрирование блоков по горизонтали */
      font-size: 14px;
+     padding-right: 100px;
     }
+
+    .footer-center div {
+      display: flex;
+      align-items: center; /* Выравнивание элементов внутри блока по вертикали */
+      margin-bottom: 10px; /* Добавляем отступ между элементами */
+  }
   
     .footer-center i {
       margin-bottom: 5px;
