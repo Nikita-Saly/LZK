@@ -810,7 +810,6 @@ li.advantage-item {
   .contact-info {
     font-size: 12px;
     font-size: 12px;
-    flex-grow: 1; /* Растягиваем блок */
     margin-right: 5px; /* Минимальный отступ от названия компании */
   }
 
