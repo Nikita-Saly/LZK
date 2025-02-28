@@ -67,6 +67,28 @@ modalTriggers.forEach(trigger => {
     openModal(modalId);
   });
 });
+
+
+  const elements = document.querySelectorAll(".hidden");
+
+  function onScroll() {
+    elements.forEach((el) => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight * 0.85) {
+        el.classList.add("visible");
+      }
+    });
+  }
+
+  // Запускаем функцию при загрузке страницы и при скролле
+  window.addEventListener("scroll", onScroll);
+  onScroll();
 });
+
+
+
+
+
+
 
 

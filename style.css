@@ -49,12 +49,12 @@ a {
   display: inline-block;
   color: black;
   padding: 10px;
+  transition: font-size 0.3s ease;
   
 }
 
 a:hover {
-  border: 2px solid #4CAF50;
-  border-radius: 15px; /* Радиус скругления углов */
+  font-size: 1.2em;
 }
 
 img {
@@ -67,7 +67,10 @@ img {
 .btn {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #4CAF50;
+  background: #39833C;
+background: -moz-linear-gradient(слева, #39833C 0%, #449D48 48%, #62E167 100%);
+background: -webkit-linear-gradient(слева, #39833C 0%, #449D48 48%, #62E167 100%);
+background: linear-gradient(to right, #39833C 0%, #449D48 48%, #62E167 100%);
   color: white;
   text-decoration: none;
   border-radius: 5px;
@@ -95,7 +98,10 @@ img {
 }
 
 .custom-navbar {
-  background-color: #4CAF50; 
+  background: #39833C;
+  background: -moz-linear-gradient(слева, #39833C 0%, #449D48 48%, #62E167 100%);
+  background: -webkit-linear-gradient(слева, #39833C 0%, #449D48 48%, #62E167 100%);
+  background: linear-gradient(to right, #39833C 0%, #449D48 48%, #62E167 100%);
 }
 
 .navbar-brand {
@@ -112,6 +118,15 @@ img {
   font-family: "Pacifico", serif;
   font-weight: 400;
   font-style: normal;
+  }
+
+  .nav-link {
+    text-decoration: none; /* Убираем подчеркивание */
+    transition: font-size 0.4s ease; /* Плавное увеличение */
+  }
+  
+  .nav-link:hover {
+    font-size: 1.8em; /* Увеличиваем текст при наведении */
   }
 
 .navbar-light .navbar-nav .nav-link {
@@ -176,6 +191,7 @@ nav .nav-link {
 
 /* Стили для секции hero */
 .hero {
+  animation: show 3s;
    background-size: cover; /* Масштабирует изображение, чтобы оно полностью покрывало элемент */
     background-position: center; /* Центрирует изображение */
     background-repeat: no-repeat;
@@ -184,8 +200,13 @@ nav .nav-link {
     text-align: center;
     margin: 0 45px; /* Устанавливаем такие же отступы, как у других секций */
     position: relative;
-    
+      
   }
+
+  @keyframes show {
+
+    from {opacity: 0;} to {opacity: 1;}
+    }
 
   .background-image {
     filter: brightness(50%) contrast(150%);
@@ -206,6 +227,19 @@ nav .nav-link {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Тень для улучшения читаемости */
   
 }
+
+
+.hidden {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 
 /* Section */
 section {
@@ -230,15 +264,25 @@ section .image {
   flex-basis: 40%; /* Устанавливаем ширину изображения */
   margin-left: 20px;
   }
+  
+  #banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+  }
+
 
 section .content {
-  font-family: 'Arial', sans-serif; /* или 'Roboto', sans-serif; */
-    font-size: 16px;
-    font-weight: 400;
-    font-style: normal;
-  flex-basis: 50%; /* Устанавливаем ширину текста */
-  margin-right: 20px;
+  padding: 20px;
+  border: 3px solid #39833C;; /* Цвет рамки */
+  border-radius: 10px; /* Скругление углов */
+  background: rgba(128, 133, 141, 0.1); /* Полупрозрачный фон */
+  max-width: 50%; /* Чтобы текст не растягивался на всю ширину */
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); /* Тень */
 }
+
+
 
 section .content p {
   text-align: justify;
@@ -249,30 +293,34 @@ section .image img {
   width: 100%; /* Изображение занимает всю доступную ширину */
   height: auto; /* Сохраняем пропорции изображения */
   display: block; /* Для правильной работы высоты */
-  border-radius: 0; /* Убираем скругление */
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  
 }
 
 .actions {
   display: flex;
-  justify-content: center; /* Центрирует элемент по горизонтали */
-  margin-top: 20px; /* Опциональный отступ сверху */
+  justify-content: center; 
+  margin-top: 20px; 
 }
 
 .actions li {
-  list-style-type: none; /* Убираем маркеры списка */
+  list-style-type: none; 
 }
 
 /* Кнопки */
 .button.big {
   display: inline-block;
   padding: 12px 24px;
-  background-color: #4CAF50;
+  background: #39833C;
+  background: -moz-linear-gradient(слева, #39833C 0%, #449D48 48%, #62E167 100%);
+  background: -webkit-linear-gradient(слева, #39833C 0%, #449D48 48%, #62E167 100%);
+  background: linear-gradient(to right, #39833C 0%, #449D48 48%, #62E167 100%);
   color: #fff;
   text-decoration: none;
   border-radius: 4px;
   transition: background-color 0.3s ease;
-  text-align: center; /* Центрируем текст внутри кнопки */
-}
+  text-align: center; 
+  }
 
 .button.big:hover {
   background-color: #478a49;
@@ -504,7 +552,10 @@ li.advantage-item {
   text-align: center;
   padding-top: 10px;
   padding-bottom: 10px; /* добавляем padding снизу */
-  background-color: #4CAF50; 
+  background: #39833C;
+background: -moz-linear-gradient(слева, #39833C 0%, #449D48 48%, #62E167 100%);
+background: -webkit-linear-gradient(слева, #39833C 0%, #449D48 48%, #62E167 100%);
+background: linear-gradient(to right, #39833C 0%, #449D48 48%, #62E167 100%);
   color: #16a83b; /* или любой другой цвет текста */
 }
 
