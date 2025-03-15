@@ -110,6 +110,10 @@ background: linear-gradient(to right, #39833C 0%, #449D48 48%, #62E167 100%);
   font-family: 22px;
 }
 
+.gamberger {
+  display: none;
+}
+
 .navbar-nav .nav-link {
   font-size: 22px; 
   font-family: "Pacifico", serif;
@@ -447,8 +451,6 @@ li.advantage-item {
   margin-left: auto; 
 }
 
-
-
 .footer-distributed .footer-center i{
 	background-color:  #1fad3c;
 	color: #080808;
@@ -547,7 +549,7 @@ li.advantage-item {
   width: 100%;
   text-align: center;
   padding-top: 10px;
-  padding-bottom: 10px; /* добавляем padding снизу */
+  padding-bottom: 10px; 
   background: #39833C;
 background: -moz-linear-gradient(слева, #39833C 0%, #449D48 48%, #62E167 100%);
 background: -webkit-linear-gradient(слева, #39833C 0%, #449D48 48%, #62E167 100%);
@@ -564,8 +566,8 @@ background: linear-gradient(to right, #39833C 0%, #449D48 48%, #62E167 100%);
 
 /* Стиль для модального окна */
 .modal {
-    display: none; /* Скрыто по умолчанию */
-    position: fixed; /* Фиксированное положение */
+    display: none; 
+    position: fixed; 
     position: fixed;
     z-index: 1000;
     top: 50%;
@@ -573,16 +575,16 @@ background: linear-gradient(to right, #39833C 0%, #449D48 48%, #62E167 100%);
     transform: translate(-50%, -50%);
     width: 100%; 
     height: 100%;
-    overflow: auto; /* Прокрутка, если необходимо */
-    background-color: rgba(0,0,0,0.4); /* Полупрозрачный фон */
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.4); 
 }
 
 .modal-content {
   background-color: #fefefe;
-    margin: 15% auto; /* 15% сверху и по центру */
+    margin: 15% auto; 
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* 80% ширины */
+    width: 80%; 
   }
 
 .modal-content p {
@@ -618,16 +620,8 @@ background: linear-gradient(to right, #39833C 0%, #449D48 48%, #62E167 100%);
 }
 
 
-/* Скрыть меню на малых экранах */
-.collapse {
-  display: none;
-}
 
-/* Показать меню при клике на гамбургер */
-.collapse.show {
-  display: block;
-}
-/* Медиа-запросы для адаптивности */
+
 
 /* Десктопы (1200px и выше) */
 @media (min-width: 1200px) {
@@ -885,6 +879,63 @@ background: linear-gradient(to right, #39833C 0%, #449D48 48%, #62E167 100%);
 /* Телефоны (576px - 767px) */
 @media (max-width: 767px) {
  
+
+  .gamberger {
+    display: block;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    background: linear-gradient(to right, #39833C 0%, #449D48 48%, #62E167 100%);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.gamberger-nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+}
+
+.icon-gamburg {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease-in-out;
+}
+
+details[open] .icon-gamburg {
+    transform: rotate(90deg);
+}
+
+.gamberger ul {
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+    background: linear-gradient(to right, #39833C 0%, #449D48 48%, #62E167 100%);
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    right: 0;
+    top: 50px;
+    width: 200px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.gamberger ul li {
+    padding: 10px 15px;
+}
+
+.gamberger ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+
   .container {
     max-width: 540px;
   }
