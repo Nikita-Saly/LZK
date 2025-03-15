@@ -155,7 +155,7 @@ nav:hover {
 
 nav .navbar-brand,
 nav .nav-link {
-  color: #333; /* Темный цвет текста для контраста */
+  color: black; 
   line-height: 60px;
 }
 
