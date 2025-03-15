@@ -887,7 +887,6 @@ background: linear-gradient(to right, #39833C 0%, #449D48 48%, #62E167 100%);
     right: 15px;
     background: linear-gradient(to right, #39833C 0%, #449D48 48%, #62E167 100%);
     padding: 10px;
-    border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     cursor: pointer;
 }
