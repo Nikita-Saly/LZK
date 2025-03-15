@@ -632,6 +632,14 @@ background: linear-gradient(to right, #39833C 0%, #449D48 48%, #62E167 100%);
 
 /* Ноутбуки и планшеты в горизонтальном положении (992px - 1199px) */
 @media (max-width: 1199px) {
+  .contact-info {
+    font-size: 14px;
+  }
+
+  .contact-info i {
+    font-size: 18px;
+  }
+  
   .main {
     margin-top: 120px;
   }
@@ -830,6 +838,60 @@ background: linear-gradient(to right, #39833C 0%, #449D48 48%, #62E167 100%);
 
 /* Планшеты (768px - 991px) */
 @media (max-width: 991px) {
+  .gamberger {
+    display: block;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.gamberger-nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+}
+
+.gamberger ul {
+    list-style: none;
+    margin-top: 25px;
+    padding: 10px;
+    background: linear-gradient(to right, #39833C 0%, #449D48 48%, #62E167 100%);
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    right: 0;
+    top: 50px;
+    width: 200px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.gamberger ul li {
+    padding: 10px 15px;
+}
+
+.gamberger ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px; 
+    font-weight: bold;
+    transition: transform 0.3s ease, font-size 0.3s ease;
+}
+
+
+.gamberger ul li a:hover {
+  
+  font-size: 18px;
+}
+  
+  
+  
   .main {
     margin-top: 120px;
   }
@@ -885,10 +947,9 @@ background: linear-gradient(to right, #39833C 0%, #449D48 48%, #62E167 100%);
     position: fixed;
     top: 15px;
     right: 15px;
-    background: linear-gradient(to right, #39833C 0%, #449D48 48%, #62E167 100%);
     padding: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
 }
 
 .gamberger-nav {
@@ -901,19 +962,9 @@ background: linear-gradient(to right, #39833C 0%, #449D48 48%, #62E167 100%);
     cursor: pointer;
 }
 
-.icon-gamburg {
-    width: 30px;
-    height: 30px;
-    transition: transform 0.3s ease-in-out;
-}
-
-details[open] .icon-gamburg {
-    transform: rotate(90deg);
-}
-
 .gamberger ul {
     list-style: none;
-    margin: 0;
+    margin-top: 25px;
     padding: 10px;
     background: linear-gradient(to right, #39833C 0%, #449D48 48%, #62E167 100%);
     border-radius: 5px;
@@ -931,8 +982,16 @@ details[open] .icon-gamburg {
 
 .gamberger ul li a {
     text-decoration: none;
-    color: #333;
-    font-size: 16px;
+    color: black;
+    font-size: 16px; 
+    font-weight: bold;
+    transition: transform 0.3s ease, font-size 0.3s ease;
+}
+
+
+.gamberger ul li a:hover {
+  
+  font-size: 18px;
 }
 
   .container {
