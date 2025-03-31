@@ -332,7 +332,7 @@ section .image img {
   grid-template-columns: (4, 1fr);
   gap: 8px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 50px;
   text-align: center;
 }
 
@@ -350,17 +350,17 @@ li.advantage-item {
   display: flex;
   flex-direction: column;  /* Располагаем иконку и текст вертикально */
   align-items: center; 
-  width: calc((100% / 3) - 20px);
+ 
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   padding: 20px;
   background-color: white;
   text-align: center;
-  min-width: 200px; /* Минимальная ширина блока */
+  min-width: 200px; /*  Минимальная ширина блока */
+  max-width: 300px; /* Максимальная ширина блока */
 }
 
 .advantage-icon {
-  
   font-size: 48px;
   color: #4CAF50;
   margin-bottom: 10px;
@@ -383,6 +383,7 @@ li.advantage-item {
   text-align: justify;
   line-height: 1.5;
   color: #666;
+  padding-top: 10px;
 }
 
 /* footer */
@@ -671,13 +672,14 @@ background: linear-gradient(to right, #39833C 0%, #449D48 48%, #62E167 100%);
   }
 
   .footer-distributed {
-    padding: 30px;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+      display: flex;
+      flex-wrap: wrap; /* Чтобы блоки переносились при нехватке места */
+      justify-content: space-between; /* Размещаем блоки по краям */
+      gap: 20px; /* Добавляем расстояние между колонками */
   }
+  
   .footer-left, .footer-center {
-    width: 100%;
+    width: 48%;
   }
 
   .footer-left .logo img {
@@ -722,7 +724,7 @@ background: linear-gradient(to right, #39833C 0%, #449D48 48%, #62E167 100%);
     section .content {
     flex-direction: column;
     text-align: center;
-    max-width: 100%; /* Чтобы текст не растягивался на всю ширину */
+    max-width: 50%; /* Чтобы текст не растягивался на всю ширину */
       padding: 10px 20px; /* Немного отступов по бокам для читабельности */
       box-sizing: border-box; 
   }
@@ -811,14 +813,14 @@ background: linear-gradient(to right, #39833C 0%, #449D48 48%, #62E167 100%);
 
   .footer-distributed {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
+    flex-wrap: wrap; /* Чтобы блоки переносились при нехватке места */
+    justify-content: space-between; /* Размещаем блоки по краям */
+    gap: 20px; /* Добавляем расстояние между колонками */
+}
 
-  .footer-left {
-    margin-bottom: 20px;
-  }
+.footer-left, .footer-center {
+  width: 48%;
+}
 
   .footer-left .logo img {
     width: 90px;
@@ -936,6 +938,12 @@ background: linear-gradient(to right, #39833C 0%, #449D48 48%, #62E167 100%);
   .navbar-brand {
     font-size: 14px;
   }
+  .footer-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
 
   .contact-info {
     font-size: 12px;
@@ -1084,7 +1092,19 @@ background: linear-gradient(to right, #39833C 0%, #449D48 48%, #62E167 100%);
   
   .advantages-section {
     grid-template-columns: repeat(1, 1fr);
+    width: 100%; /* Растягиваем секцию на всю ширину экрана */
+    padding: 20 20px /* Убираем внутренние отступы */
   }
+
+  .advantages-list {
+    width: 100%; /* Делаем список на всю ширину */
+    padding: 0 20px; /* Добавляем боковые отступы для удобочитаемости */
+    box-sizing: border-box; /* Учитываем padding в общей ширине */
+}
+
+.advantage-item {
+    width: 100%; /* Каждому элементу списка даем 100% ширины */
+}
 
   .footer-distributed {
     flex-direction: column;
@@ -1303,10 +1323,6 @@ background: linear-gradient(to right, #39833C 0%, #449D48 48%, #62E167 100%);
     }
 
 
-
-
-
-
     .footer-distributed {
       text-align: center;
       padding: 15px;
@@ -1323,6 +1339,7 @@ background: linear-gradient(to right, #39833C 0%, #449D48 48%, #62E167 100%);
     }
   
     .footer-left p {
+      display: none;
       font-size: 14px;
     }
     
@@ -1335,13 +1352,14 @@ background: linear-gradient(to right, #39833C 0%, #449D48 48%, #62E167 100%);
       display: flex;
       flex-direction: column; /* Располагаем элементы в колонку */
       align-items: center; /* Центрирование блоков по горизонтали */
-     font-size: 14px;
-     padding-right: 100px;
+     font-size: 12px;
+     padding-right: 225px;
+     
     }
 
     .footer-center div {
       display: flex;
-      align-items: center; /* Выравнивание элементов внутри блока по вертикали */
+      /* align-items: center; Выравнивание элементов внутри блока по вертикали */
       margin-bottom: 10px; /* Добавляем отступ между элементами */
   }
   
@@ -1350,7 +1368,7 @@ background: linear-gradient(to right, #39833C 0%, #449D48 48%, #62E167 100%);
     }
   
     .footer-center p {
-      margin: 5px 0;
+      margin: 5px 5px;
     }
   
     .footer-center a {
