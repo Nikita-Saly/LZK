@@ -714,19 +714,20 @@ background: linear-gradient(to right, #39833C 0%, #449D48 48%, #62E167 100%);
   .hero h1 {
     font-size: 36px;
   }
+
   .hero p {
     font-size: 18px;
   }
-  section {
+  
+    section .content {
     flex-direction: column;
     text-align: center;
-    padding: 30px;
+    max-width: 100%; /* Чтобы текст не растягивался на всю ширину */
+      padding: 10px 20px; /* Немного отступов по бокам для читабельности */
+      box-sizing: border-box; 
   }
 
-  section .content, section .image {
-    flex-basis: 100%;
-    margin: 0;
-  }
+  
 
   section .image {
     margin-top: 20px;
@@ -738,8 +739,7 @@ background: linear-gradient(to right, #39833C 0%, #449D48 48%, #62E167 100%);
   }
   .footer-links {
     display: flex;
-    flex-direction: column;
-    
+    flex-direction: column;    
     gap: 5px; /* Отступ между ссылками */
   }
 
@@ -1065,6 +1065,7 @@ background: linear-gradient(to right, #39833C 0%, #449D48 48%, #62E167 100%);
     flex-direction: column;
     text-align: center;
     padding: 30px;
+    max-width: 100%; /* Чтобы текст не растягивался на всю ширину */
   }
 
   section .content, section .image {
@@ -1194,15 +1195,10 @@ background: linear-gradient(to right, #39833C 0%, #449D48 48%, #62E167 100%);
     }
     
 
-    .footer-left,
-  .footer-center {
-    
-    justify-content: center;
+  .footer-left,  .footer-center {
+        justify-content: center;
   }
 
-  
-    
-  
     .footer-left .logo img {
       width: 80px;
       height: auto;
@@ -1212,19 +1208,16 @@ background: linear-gradient(to right, #39833C 0%, #449D48 48%, #62E167 100%);
       font-size: 14px;
     }
   
-
     .footer-links a {
-      display: block; /* Переносим ссылки в отдельные строки */
+    display: block; /* Переносим ссылки в отдельные строки */
     text-align: left; 
-     
-      
     }
   
     .footer-center{
       display: flex;
-    flex-direction: column; /* Располагаем элементы в колонку */
+      flex-direction: column; /* Располагаем элементы в колонку */
       align-items: center;
-    justify-content: space-between; /* Размещаем элементы по центру */
+      justify-content: space-between; /* Размещаем элементы по центру */
       padding-right: 100px;
       font-size: 14px;
     }
@@ -1250,6 +1243,7 @@ background: linear-gradient(to right, #39833C 0%, #449D48 48%, #62E167 100%);
   }
 
   @media (max-width: 480px) {
+    
     .hero {
       height: 500px; /* Уменьшаем высоту секции hero */
       padding: 110px 10px;
@@ -1264,20 +1258,28 @@ background: linear-gradient(to right, #39833C 0%, #449D48 48%, #62E167 100%);
       font-size: 14px;
     }
   
-    section {
-      flex-direction: column;
+    section .content {
+      flex-basis: 100%;
+      margin: 0;
       text-align: center;
-      padding: 20px;
+      padding: 30px 20px; /* Немного отступов по бокам для читабельности */
+      box-sizing: border-box; 
+      height: 350px; /* Уменьшаем высоту секции контента */
+      max-width: 100%; /* Чтобы текст не растягивался на всю ширину */
+    }
+
+    section h2 {
+      font-size: 18px;
+    }
+
+    section h3,h4 {
+      font-size: 14px;
     }
   
-    section .content {
-      font-size: 14px;
-      margin-right: 0;
-    }
   
     section .image {
       flex-basis: 100%;
-      margin: 10px 0;
+      margin: 20px 0;
     }
   
     section .image img {
